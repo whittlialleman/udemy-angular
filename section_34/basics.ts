@@ -90,3 +90,30 @@ class Student {
 const student = new Student('Whip', 'Alleman', 25, ['Angular']);
 student.enroll('React'); //student.courses => Angular, React
 student.listCourses();
+
+//Interfaces
+
+interface Human {
+    firstName: string;
+    age: number;
+
+    greet: () => void;
+}
+
+let max: Human;
+
+max = {
+    firstName: 'Max',
+    age: 25,
+    greet() {
+        console.log('Hello!');
+    },
+};
+
+class Instructor implements Human { //Typescript forces this to have the same structure as Human
+    firstName: string;
+    age: number;
+    greet() {
+        console.log('Hello!');
+    }
+}
