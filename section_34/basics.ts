@@ -33,4 +33,8 @@ person = {
 let people: {
     name: string;
     age: number;
-}[]; 
+}[];
+
+//Type inference
+let course = 'React - The Complete Guide'; //Type inference is helpful and should be used
+//course = 12341; //Get an error because typescript inferred the type of course is a string, not a number
