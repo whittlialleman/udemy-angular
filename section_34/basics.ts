@@ -41,3 +41,13 @@ let course = 'React - The Complete Guide'; //Type inference is helpful and shoul
 //Union types
 let course2: string | number = 'React - The Complete Guide';
 course2 = 12341; //No longer get the error because we allow both string and number types for the variable
+
+//Functions and types
+
+function add(a:number, b: number): number { //You can declare a type here, or TS will infer it is a number as it's returning a number plus a number
+    return a + b;
+};
+
+function print_output(value: any) { //Because this isn't returning anything, it's return type is void
+    console.log(value);
+};
