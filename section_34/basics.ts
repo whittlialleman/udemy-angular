@@ -14,4 +14,23 @@ let isInstructor: boolean;
 
 isInstructor = true;
 
-//
+//More complex types
+
+let hobbies: string[]; //This allows you to have an array of strings instead of just one string - can do the same with number, boolean, etc
+
+hobbies = ['Motorcycle riding', 'Cooking', 'Watching TV'];
+
+let person: {
+    name: string;
+    age: number;
+}; 
+
+person = {
+    name: 'Whip',
+    age: 25
+};
+
+let people: {
+    name: string;
+    age: number;
+}[]; 
