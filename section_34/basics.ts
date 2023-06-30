@@ -63,3 +63,30 @@ const demoArray = [1,2,3];
 
 const updatedArray = insertAtBeginning(demoArray, -1); //[-1, 1, 2, 3]
 const stringArray = insertAtBeginning(['a', 'b', 'c'], 'd');
+
+//classes
+class Student {
+    // firstName: string;
+    // lastName: string;
+    // age: number;
+    // private courses: string[];
+
+    constructor(
+        public firstName: string,
+        public lastName: string,
+        public age: number,
+        private courses: string[]
+        ) {}
+
+    enroll(courseName: string) {
+        this.courses.push(courseName);
+    }
+
+    listCourses() {
+        return this.courses.slice();
+    }
+}
+
+const student = new Student('Whip', 'Alleman', 25, ['Angular']);
+student.enroll('React'); //student.courses => Angular, React
+student.listCourses();
