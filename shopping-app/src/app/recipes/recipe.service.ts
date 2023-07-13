@@ -9,11 +9,12 @@ import { ShoppingListService } from '../shopping-list/shopping-list.service';
 export class RecipeService {
     recipesChanged = new Subject<Recipe[]>();
 
-    private recipes: Recipe[] = [
-        new Recipe('Schnitzel', 'German schnitzel dish', 'https://upload.wikimedia.org/wikipedia/commons/7/72/Schnitzel.JPG', [new Ingredient('Meat', 1), new Ingredient('French Fries', 20)]),
+    // private recipes: Recipe[] = [
+    //     new Recipe('Schnitzel', 'German schnitzel dish', 'https://upload.wikimedia.org/wikipedia/commons/7/72/Schnitzel.JPG', [new Ingredient('Meat', 1), new Ingredient('French Fries', 20)]),
 
-        new Recipe('Cheeseburger', 'Traditional American cheeseburger', 'https://cdn.pixabay.com/photo/2023/03/03/02/27/food-7826772_1280.jpg', [new Ingredient('Buns', 2), new Ingredient('Meat', 1)]),
-      ];
+    //     new Recipe('Cheeseburger', 'Traditional American cheeseburger', 'https://cdn.pixabay.com/photo/2023/03/03/02/27/food-7826772_1280.jpg', [new Ingredient('Buns', 2), new Ingredient('Meat', 1)]),
+    //   ];
+    private recipes: Recipe[] = [];
 
     constructor(private slService: ShoppingListService) {}
 
