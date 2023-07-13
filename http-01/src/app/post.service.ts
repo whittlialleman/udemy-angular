@@ -32,7 +32,8 @@ export class PostService {
         .get<{[key: string]: Post }>('https://udemy-angular-f2c29-default-rtdb.firebaseio.com/posts.json', 
         {
             headers: new HttpHeaders({ 'Custom-Header': 'Hello' }),
-            params: searchParams
+            params: searchParams,
+            responseType: 'json'
         })
         .pipe(map(responseData => {
             const postsArray: Post[] = [];
@@ -52,7 +53,8 @@ export class PostService {
     deletePosts() {
         return this.http.delete('https://udemy-angular-f2c29-default-rtdb.firebaseio.com/posts.json', 
         {
-            observe: 'events'
+            observe: 'events',
+            responseType: 'text'
         }
         ).pipe(tap(event => {
             console.log(event);
