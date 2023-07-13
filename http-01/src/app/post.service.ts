@@ -31,4 +31,8 @@ export class PostService {
         })
         );
     }
+
+    deletePosts() {
+        return this.http.delete('https://udemy-angular-f2c29-default-rtdb.firebaseio.com/posts.json');
+    }
 }
