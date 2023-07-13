@@ -12,7 +12,7 @@
           </span>
           <strong>{{ server.name }}</strong> | 
           {{ server.instanceType | uppercase }} | 
-          {{ server.started | date:'fullDate' }}
+          {{ server.started | date:'fullDate' | uppercase }} <!--pipes have to go in a certain order-->
         </li>
       </ul>
     </div>
