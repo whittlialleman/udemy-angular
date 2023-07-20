@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "udemy-angular-f2c29": {
+      "hosting": {
+        "angular-config": [
+          "udemy-angular-f2c29"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "udemy-angular-f2c29"
+  }
+}
